@@ -1,0 +1,110 @@
+@using SV2380601458.Web.Models.Exams
+@model ImportExamViewModel
+@{
+    ViewBag.Title = "Import đề thi";
+    ViewBag.CurrentPageName = "Exams";
+}
+
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-6">
+                <h1>Import đề thi từ file Word</h1>
+            </div>
+            <div class="col-sm-6 text-sm-right">
+                <a asp-action="Index" class="btn btn-outline-secondary">
+                    <i class="fas fa-arrow-left"></i> Về danh sách đề
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-7">
+                <div class="card card-primary card-outline">
+                    <div class="card-header">
+                        <h3 class="card-title"><i class="fas fa-file-upload"></i> Chọn file đề (.docx)</h3>
+                    </div>
+                    <form asp-action="Import" method="post" enctype="multipart/form-data">
+                        <div class="card-body">
+                            <div class="form-group">
+                                <input type="file" name="file" accept=".docx" class="form-control" style="height:auto" required />
+                                <small class="form-text text-muted">
+                                    Hệ thống chỉ lưu khi file đúng 100% định dạng. Nếu có lỗi, toàn bộ file bị huỷ và danh sách lỗi sẽ hiện bên dưới.
+                                </small>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <button type="submit" class="btn btn-primary" id="btnImport">
+                                <i class="fas fa-check"></i> Kiểm tra và import
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                @if (Model.Errors.Count > 0)
+                {
+                    <div class="card card-danger">
+                        <div class="card-header">
+                            <h3 class="card-title">
+                                <i class="fas fa-times-circle"></i>
+                                File "@Model.FileName" có @Model.Errors.Count lỗi. Không có dữ liệu nào được lưu.
+                            </h3>
+                        </div>
+                        <div class="card-body" style="max-height:480px; overflow:auto">
+                            <ol class="mb-0 pl-3">
+                                @foreach (var err in Model.Errors)
+                                {
+                                    <li class="mb-1">@err</li>
+                                }
+                            </ol>
+                        </div>
+                        <div class="card-footer text-muted">
+                            Sửa các lỗi trên trong file Word rồi upload lại.
+                        </div>
+                    </div>
+                }
+            </div>
+
+            <div class="col-lg-5">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title"><i class="fas fa-info-circle"></i> Cấu trúc tag bắt buộc</h3>
+                    </div>
+                    <div class="card-body small">
+<pre class="mb-2" style="white-space:pre-wrap">[EXAM]
+[TITLE] Tên đề
+[DURATION] 75
+[PART 5] [SHUFFLE_Q]
+[Q 101] [SHUFFLE_A]
+Nội dung câu hỏi
+(A) ...  (B) ...  (C) ...  (D) ...
+[ANSWER] B
+[HINT] Giải thích
+[/Q]
+[/PART]
+[PART 6]
+[GROUP 131-134]
+[PASSAGE] ... [BLANK 131] ... [/PASSAGE]
+[Q 131] ... [/Q]
+[/GROUP]
+[/PART]
+[/EXAM]</pre>
+                        Thêm dòng <code>[MODE] TEST</code> sau <code>[DURATION]</code> để import thử file ít hơn 100 câu.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section scripts {
+    <script>
+        $('form').on('submit', function () {
+            $('#btnImport').prop('disabled', true).html('<i class="fas fa-spinner fa-spin"></i> Đang kiểm tra...');
+        });
+    </script>
+}

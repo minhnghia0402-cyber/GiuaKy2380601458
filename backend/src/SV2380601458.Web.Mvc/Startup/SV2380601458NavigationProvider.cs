@@ -13,6 +13,15 @@ public class SV2380601458NavigationProvider : NavigationProvider
     public override void SetNavigation(INavigationProviderContext context)
     {
         context.Manager.MainMenu
+                .AddItem(
+                    new MenuItemDefinition(
+                        "Exams",
+                        new FixedLocalizableString("Quản lý đề thi"),
+                        url: "Exams",
+                        icon: "fas fa-file-alt",
+                        requiresAuthentication: true
+                    )
+                )
             .AddItem(
                 new MenuItemDefinition(
                     PageNames.About,

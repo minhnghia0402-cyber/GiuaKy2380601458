@@ -1,0 +1,106 @@
+@using SV2380601458.Exams
+@using SV2380601458.Exams.Dto
+@model List<ExamListDto>
+@{
+    ViewBag.Title = "Quản lý đề thi";
+    ViewBag.CurrentPageName = "Exams";
+}
+
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-6">
+                <h1>Quản lý đề thi</h1>
+            </div>
+            <div class="col-sm-6 text-sm-right">
+                <a asp-action="Import" class="btn btn-primary">
+                    <i class="fas fa-file-upload"></i> Import đề từ file Word
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content">
+    <div class="container-fluid">
+
+        @if (TempData["Success"] != null)
+        {
+            <div class="alert alert-success"><i class="fas fa-check-circle"></i> @TempData["Success"]</div>
+        }
+        @if (TempData["Error"] != null)
+        {
+            <div class="alert alert-danger"><i class="fas fa-exclamation-triangle"></i> @TempData["Error"]</div>
+        }
+
+        <div class="card">
+            <div class="card-body p-0">
+                @if (Model.Count == 0)
+                {
+                    <div class="p-5 text-center text-muted">
+                        <i class="fas fa-folder-open fa-3x mb-3"></i>
+                        <p>Chưa có đề thi nào. Bấm <b>Import đề từ file Word</b> để bắt đầu.</p>
+                    </div>
+                }
+                else
+                {
+                    <div class="table-responsive">
+                        <table class="table table-hover mb-0">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th style="width:50px">#</th>
+                                    <th>Tên đề</th>
+                                    <th class="text-center">Số câu</th>
+                                    <th class="text-center">Thời gian</th>
+                                    <th class="text-center">Trạng thái</th>
+                                    <th class="text-center">Lượt thi</th>
+                                    <th>Ngày import</th>
+                                    <th class="text-right">Thao tác</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @{ var i = 1; }
+                                @foreach (var e in Model)
+                                {
+                                    <tr>
+                                        <td>@(i++)</td>
+                                        <td>
+                                            <b>@e.Title</b><br />
+                                            <small class="text-muted"><i class="far fa-file-word"></i> @e.SourceFileName</small>
+                                        </td>
+                                        <td class="text-center">@e.TotalQuestions</td>
+                                        <td class="text-center">@e.DurationMinutes phút</td>
+                                        <td class="text-center">
+                                            @switch (e.Status)
+                                            {
+                                                case ExamStatus.Draft:
+                                                    <span class="badge badge-secondary">Bản nháp</span>
+                                                    break;
+                                                case ExamStatus.Published:
+                                                    <span class="badge badge-success">Đang mở thi</span>
+                                                    break;
+                                                default:
+                                                    <span class="badge badge-dark">Đã đóng</span>
+                                                    break;
+                                            }
+                                        </td>
+                                        <td class="text-center">@e.AttemptCount</td>
+                                        <td>@e.CreationTime.ToString("dd/MM/yyyy HH:mm")</td>
+                                        <td class="text-right text-nowrap">
+                                            <form asp-action="Delete" asp-route-id="@e.Id" method="post" class="d-inline"
+                                                  onsubmit="return confirm('Xoá đề &quot;@e.Title&quot;?');">
+                                                <button type="submit" class="btn btn-sm btn-outline-danger">
+                                                    <i class="fas fa-trash"></i> Xoá
+                                                </button>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</section>
