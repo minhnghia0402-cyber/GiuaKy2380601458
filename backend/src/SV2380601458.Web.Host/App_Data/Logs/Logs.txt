@@ -423,3 +423,170 @@ INFO  2026-10-17 15:36:02,900 [2    ] Microsoft.Hosting.Lifetime               -
 INFO  2026-10-17 15:36:02,903 [2    ] Microsoft.Hosting.Lifetime               - Application started. Press Ctrl+C to shut down.
 INFO  2026-10-17 15:36:02,903 [2    ] Microsoft.Hosting.Lifetime               - Hosting environment: Development
 INFO  2026-10-17 15:36:02,904 [2    ] Microsoft.Hosting.Lifetime               - Content root path: C:\Users\minhn\Downloads\kiểm tra\GiuaKy\backend\src\SV2380601458.Web.Host
+INFO  2026-10-17 15:38:02,109 [11   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 OPTIONS https://localhost:44311/api/TokenAuth/Authenticate - - -
+INFO  2026-10-17 15:38:02,113 [11   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2026-10-17 15:38:02,120 [13   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 POST https://localhost:44311/api/TokenAuth/Authenticate - application/json 75
+INFO  2026-10-17 15:38:02,121 [13   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2026-10-17 15:38:02,122 [11   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 OPTIONS https://localhost:44311/api/TokenAuth/Authenticate - 204 - - 7.4248ms
+INFO  2026-10-17 15:38:02,170 [13   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'SV2380601458.Controllers.TokenAuthController.Authenticate (SV2380601458.Web.Core)'
+INFO  2026-10-17 15:38:02,212 [13   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "Authenticate", controller = "TokenAuth", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[SV2380601458.Models.TokenAuth.AuthenticateResultModel] Authenticate(SV2380601458.Models.TokenAuth.AuthenticateModel) on controller SV2380601458.Controllers.TokenAuthController (SV2380601458.Web.Core).
+WARN  2026-10-17 15:38:02,618 [14   ] Mvc.ExceptionHandling.AbpExceptionFilter - Login failed!
+Abp.UI.UserFriendlyException: Login failed!
+   at SV2380601458.Controllers.TokenAuthController.GetLoginResultAsync(String usernameOrEmailAddress, String password, String tenancyName) in C:\Users\minhn\Downloads\kiểm tra\GiuaKy\backend\src\SV2380601458.Web.Core\Controllers\TokenAuthController.cs:line 79
+   at SV2380601458.Controllers.TokenAuthController.Authenticate(AuthenticateModel model) in C:\Users\minhn\Downloads\kiểm tra\GiuaKy\backend\src\SV2380601458.Web.Core\Controllers\TokenAuthController.cs:line 43
+   at lambda_method1623(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+INFO  2026-10-17 15:38:02,624 [14   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2026-10-17 15:38:02,641 [14   ] c.Infrastructure.ControllerActionInvoker - Executed action SV2380601458.Controllers.TokenAuthController.Authenticate (SV2380601458.Web.Core) in 422.1123ms
+INFO  2026-10-17 15:38:02,642 [14   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'SV2380601458.Controllers.TokenAuthController.Authenticate (SV2380601458.Web.Core)'
+INFO  2026-10-17 15:38:02,644 [14   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 POST https://localhost:44311/api/TokenAuth/Authenticate - 500 - application/json;+charset=utf-8 523.6512ms
+INFO  2026-10-17 15:38:20,582 [11   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 OPTIONS https://localhost:44311/api/TokenAuth/Authenticate - - -
+INFO  2026-10-17 15:38:20,582 [11   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2026-10-17 15:38:20,583 [11   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 OPTIONS https://localhost:44311/api/TokenAuth/Authenticate - 204 - - 0.6024ms
+INFO  2026-10-17 15:38:20,586 [13   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 POST https://localhost:44311/api/TokenAuth/Authenticate - application/json 76
+INFO  2026-10-17 15:38:20,586 [13   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2026-10-17 15:38:20,590 [13   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'SV2380601458.Controllers.TokenAuthController.Authenticate (SV2380601458.Web.Core)'
+INFO  2026-10-17 15:38:20,597 [13   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "Authenticate", controller = "TokenAuth", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[SV2380601458.Models.TokenAuth.AuthenticateResultModel] Authenticate(SV2380601458.Models.TokenAuth.AuthenticateModel) on controller SV2380601458.Controllers.TokenAuthController (SV2380601458.Web.Core).
+WARN  2026-10-17 15:38:20,616 [13   ] Mvc.ExceptionHandling.AbpExceptionFilter - Login failed!
+Abp.UI.UserFriendlyException: Login failed!
+   at SV2380601458.Controllers.TokenAuthController.GetLoginResultAsync(String usernameOrEmailAddress, String password, String tenancyName) in C:\Users\minhn\Downloads\kiểm tra\GiuaKy\backend\src\SV2380601458.Web.Core\Controllers\TokenAuthController.cs:line 79
+   at SV2380601458.Controllers.TokenAuthController.Authenticate(AuthenticateModel model) in C:\Users\minhn\Downloads\kiểm tra\GiuaKy\backend\src\SV2380601458.Web.Core\Controllers\TokenAuthController.cs:line 43
+   at lambda_method1623(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+INFO  2026-10-17 15:38:20,617 [13   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2026-10-17 15:38:20,618 [13   ] c.Infrastructure.ControllerActionInvoker - Executed action SV2380601458.Controllers.TokenAuthController.Authenticate (SV2380601458.Web.Core) in 21.0267ms
+INFO  2026-10-17 15:38:20,618 [13   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'SV2380601458.Controllers.TokenAuthController.Authenticate (SV2380601458.Web.Core)'
+INFO  2026-10-17 15:38:20,618 [13   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 POST https://localhost:44311/api/TokenAuth/Authenticate - 500 - application/json;+charset=utf-8 32.4668ms
+INFO  2026-10-17 15:38:26,267 [12   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 OPTIONS https://localhost:44311/api/TokenAuth/Authenticate - - -
+INFO  2026-10-17 15:38:26,267 [12   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2026-10-17 15:38:26,267 [12   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 OPTIONS https://localhost:44311/api/TokenAuth/Authenticate - 204 - - 0.4760ms
+INFO  2026-10-17 15:38:26,270 [14   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 POST https://localhost:44311/api/TokenAuth/Authenticate - application/json 77
+INFO  2026-10-17 15:38:26,270 [14   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2026-10-17 15:38:26,270 [14   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'SV2380601458.Controllers.TokenAuthController.Authenticate (SV2380601458.Web.Core)'
+INFO  2026-10-17 15:38:26,272 [14   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "Authenticate", controller = "TokenAuth", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[SV2380601458.Models.TokenAuth.AuthenticateResultModel] Authenticate(SV2380601458.Models.TokenAuth.AuthenticateModel) on controller SV2380601458.Controllers.TokenAuthController (SV2380601458.Web.Core).
+WARN  2026-10-17 15:38:26,447 [13   ] Mvc.ExceptionHandling.AbpExceptionFilter - Login failed!
+Abp.UI.UserFriendlyException: Login failed!
+   at SV2380601458.Controllers.TokenAuthController.GetLoginResultAsync(String usernameOrEmailAddress, String password, String tenancyName) in C:\Users\minhn\Downloads\kiểm tra\GiuaKy\backend\src\SV2380601458.Web.Core\Controllers\TokenAuthController.cs:line 79
+   at SV2380601458.Controllers.TokenAuthController.Authenticate(AuthenticateModel model) in C:\Users\minhn\Downloads\kiểm tra\GiuaKy\backend\src\SV2380601458.Web.Core\Controllers\TokenAuthController.cs:line 43
+   at lambda_method1623(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+INFO  2026-10-17 15:38:26,448 [13   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2026-10-17 15:38:26,448 [13   ] c.Infrastructure.ControllerActionInvoker - Executed action SV2380601458.Controllers.TokenAuthController.Authenticate (SV2380601458.Web.Core) in 176.0688ms
+INFO  2026-10-17 15:38:26,448 [13   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'SV2380601458.Controllers.TokenAuthController.Authenticate (SV2380601458.Web.Core)'
+INFO  2026-10-17 15:38:26,448 [13   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 POST https://localhost:44311/api/TokenAuth/Authenticate - 500 - application/json;+charset=utf-8 178.1633ms
+INFO  2026-10-17 15:38:30,196 [14   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 POST https://localhost:44311/api/TokenAuth/Authenticate - application/json 76
+INFO  2026-10-17 15:38:30,196 [14   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2026-10-17 15:38:30,197 [14   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'SV2380601458.Controllers.TokenAuthController.Authenticate (SV2380601458.Web.Core)'
+INFO  2026-10-17 15:38:30,198 [14   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "Authenticate", controller = "TokenAuth", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[SV2380601458.Models.TokenAuth.AuthenticateResultModel] Authenticate(SV2380601458.Models.TokenAuth.AuthenticateModel) on controller SV2380601458.Controllers.TokenAuthController (SV2380601458.Web.Core).
+INFO  2026-10-17 15:38:30,428 [11   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2026-10-17 15:38:30,431 [11   ] c.Infrastructure.ControllerActionInvoker - Executed action SV2380601458.Controllers.TokenAuthController.Authenticate (SV2380601458.Web.Core) in 232.7541ms
+INFO  2026-10-17 15:38:30,431 [11   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'SV2380601458.Controllers.TokenAuthController.Authenticate (SV2380601458.Web.Core)'
+INFO  2026-10-17 15:38:30,431 [11   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 POST https://localhost:44311/api/TokenAuth/Authenticate - 200 - application/json;+charset=utf-8 235.2637ms
+INFO  2026-10-17 15:38:30,471 [13   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 OPTIONS https://localhost:44311/api/services/app/StudentExam/GetPublishedExams - - -
+INFO  2026-10-17 15:38:30,471 [13   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2026-10-17 15:38:30,471 [13   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 OPTIONS https://localhost:44311/api/services/app/StudentExam/GetPublishedExams - 204 - - 0.4229ms
+INFO  2026-10-17 15:38:30,474 [14   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 OPTIONS https://localhost:44311/api/services/app/StudentExam/GetMyAttempts - - -
+INFO  2026-10-17 15:38:30,475 [14   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2026-10-17 15:38:30,475 [14   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 OPTIONS https://localhost:44311/api/services/app/StudentExam/GetMyAttempts - 204 - - 0.5508ms
+INFO  2026-10-17 15:38:30,483 [14   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44311/api/services/app/StudentExam/GetPublishedExams - application/json -
+INFO  2026-10-17 15:38:30,483 [11   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44311/api/services/app/StudentExam/GetMyAttempts - application/json -
+INFO  2026-10-17 15:38:30,483 [11   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2026-10-17 15:38:30,483 [14   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2026-10-17 15:38:30,547 [11   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'SV2380601458.Exams.Student.StudentExamAppService.GetMyAttemptsAsync (SV2380601458.Application)'
+INFO  2026-10-17 15:38:30,547 [14   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'SV2380601458.Exams.Student.StudentExamAppService.GetPublishedExamsAsync (SV2380601458.Application)'
+INFO  2026-10-17 15:38:30,551 [14   ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "GetPublishedExams", controller = "StudentExam"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[SV2380601458.Exams.Dto.StudentExamListDto]] GetPublishedExamsAsync() on controller SV2380601458.Exams.Student.StudentExamAppService (SV2380601458.Application).
+INFO  2026-10-17 15:38:30,551 [11   ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "GetMyAttempts", controller = "StudentExam"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[SV2380601458.Exams.Dto.MyAttemptDto]] GetMyAttemptsAsync() on controller SV2380601458.Exams.Student.StudentExamAppService (SV2380601458.Application).
+INFO  2026-10-17 15:38:30,642 [17   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2026-10-17 15:38:30,654 [17   ] c.Infrastructure.ControllerActionInvoker - Executed action SV2380601458.Exams.Student.StudentExamAppService.GetMyAttemptsAsync (SV2380601458.Application) in 101.9637ms
+INFO  2026-10-17 15:38:30,654 [17   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'SV2380601458.Exams.Student.StudentExamAppService.GetMyAttemptsAsync (SV2380601458.Application)'
+INFO  2026-10-17 15:38:30,654 [17   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44311/api/services/app/StudentExam/GetMyAttempts - 200 - application/json;+charset=utf-8 171.0467ms
+INFO  2026-10-17 15:38:30,682 [17   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2026-10-17 15:38:30,689 [17   ] c.Infrastructure.ControllerActionInvoker - Executed action SV2380601458.Exams.Student.StudentExamAppService.GetPublishedExamsAsync (SV2380601458.Application) in 137.1267ms
+INFO  2026-10-17 15:38:30,689 [17   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'SV2380601458.Exams.Student.StudentExamAppService.GetPublishedExamsAsync (SV2380601458.Application)'
+INFO  2026-10-17 15:38:30,689 [17   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44311/api/services/app/StudentExam/GetPublishedExams - 200 - application/json;+charset=utf-8 206.1287ms
+INFO  2026-10-17 15:38:39,216 [13   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 OPTIONS https://localhost:44311/api/services/app/StudentExam/StartAttempt - - -
+INFO  2026-10-17 15:38:39,216 [13   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2026-10-17 15:38:39,216 [13   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 OPTIONS https://localhost:44311/api/services/app/StudentExam/StartAttempt - 204 - - 0.4411ms
+INFO  2026-10-17 15:38:39,218 [17   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 POST https://localhost:44311/api/services/app/StudentExam/StartAttempt - application/json 8
+INFO  2026-10-17 15:38:39,218 [17   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2026-10-17 15:38:39,221 [17   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'SV2380601458.Exams.Student.StudentExamAppService.StartAttemptAsync (SV2380601458.Application)'
+INFO  2026-10-17 15:38:39,227 [17   ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "StartAttempt", controller = "StudentExam"}. Executing controller action with signature System.Threading.Tasks.Task`1[SV2380601458.Exams.Dto.StartAttemptOutput] StartAttemptAsync(Abp.Application.Services.Dto.EntityDto`1[System.Int32]) on controller SV2380601458.Exams.Student.StudentExamAppService (SV2380601458.Application).
+INFO  2026-10-17 15:38:39,661 [17   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2026-10-17 15:38:39,715 [13   ] c.Infrastructure.ControllerActionInvoker - Executed action SV2380601458.Exams.Student.StudentExamAppService.StartAttemptAsync (SV2380601458.Application) in 488.5694ms
+INFO  2026-10-17 15:38:39,716 [13   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'SV2380601458.Exams.Student.StudentExamAppService.StartAttemptAsync (SV2380601458.Application)'
+INFO  2026-10-17 15:38:39,716 [13   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 POST https://localhost:44311/api/services/app/StudentExam/StartAttempt - 200 - application/json;+charset=utf-8 497.5345ms
+INFO  2026-10-17 15:38:41,412 [14   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 OPTIONS https://localhost:44311/api/services/app/StudentExam/SaveAnswer - - -
+INFO  2026-10-17 15:38:41,412 [14   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2026-10-17 15:38:41,412 [14   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 OPTIONS https://localhost:44311/api/services/app/StudentExam/SaveAnswer - 204 - - 0.7057ms
+INFO  2026-10-17 15:38:41,415 [14   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 POST https://localhost:44311/api/services/app/StudentExam/SaveAnswer - application/json 47
+INFO  2026-10-17 15:38:41,415 [14   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2026-10-17 15:38:41,416 [14   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'SV2380601458.Exams.Student.StudentExamAppService.SaveAnswerAsync (SV2380601458.Application)'
+INFO  2026-10-17 15:38:41,421 [14   ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "SaveAnswer", controller = "StudentExam"}. Executing controller action with signature System.Threading.Tasks.Task`1[SV2380601458.Exams.Dto.SaveAnswerOutput] SaveAnswerAsync(SV2380601458.Exams.Dto.SaveAnswerInput) on controller SV2380601458.Exams.Student.StudentExamAppService (SV2380601458.Application).
+INFO  2026-10-17 15:38:41,500 [17   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2026-10-17 15:38:41,501 [17   ] c.Infrastructure.ControllerActionInvoker - Executed action SV2380601458.Exams.Student.StudentExamAppService.SaveAnswerAsync (SV2380601458.Application) in 79.8034ms
+INFO  2026-10-17 15:38:41,501 [17   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'SV2380601458.Exams.Student.StudentExamAppService.SaveAnswerAsync (SV2380601458.Application)'
+INFO  2026-10-17 15:38:41,501 [17   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 POST https://localhost:44311/api/services/app/StudentExam/SaveAnswer - 200 - application/json;+charset=utf-8 86.1815ms
+INFO  2026-10-17 15:38:42,900 [17   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 POST https://localhost:44311/api/services/app/StudentExam/SaveAnswer - application/json 46
+INFO  2026-10-17 15:38:42,900 [17   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2026-10-17 15:38:42,901 [17   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'SV2380601458.Exams.Student.StudentExamAppService.SaveAnswerAsync (SV2380601458.Application)'
+INFO  2026-10-17 15:38:42,903 [17   ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "SaveAnswer", controller = "StudentExam"}. Executing controller action with signature System.Threading.Tasks.Task`1[SV2380601458.Exams.Dto.SaveAnswerOutput] SaveAnswerAsync(SV2380601458.Exams.Dto.SaveAnswerInput) on controller SV2380601458.Exams.Student.StudentExamAppService (SV2380601458.Application).
+INFO  2026-10-17 15:38:42,921 [13   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2026-10-17 15:38:42,921 [13   ] c.Infrastructure.ControllerActionInvoker - Executed action SV2380601458.Exams.Student.StudentExamAppService.SaveAnswerAsync (SV2380601458.Application) in 18.1582ms
+INFO  2026-10-17 15:38:42,921 [13   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'SV2380601458.Exams.Student.StudentExamAppService.SaveAnswerAsync (SV2380601458.Application)'
+INFO  2026-10-17 15:38:42,921 [13   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 POST https://localhost:44311/api/services/app/StudentExam/SaveAnswer - 200 - application/json;+charset=utf-8 21.1441ms
+INFO  2026-10-17 15:38:44,271 [13   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 POST https://localhost:44311/api/services/app/StudentExam/SaveAnswer - application/json 47
+INFO  2026-10-17 15:38:44,271 [13   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2026-10-17 15:38:44,272 [13   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'SV2380601458.Exams.Student.StudentExamAppService.SaveAnswerAsync (SV2380601458.Application)'
+INFO  2026-10-17 15:38:44,273 [13   ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "SaveAnswer", controller = "StudentExam"}. Executing controller action with signature System.Threading.Tasks.Task`1[SV2380601458.Exams.Dto.SaveAnswerOutput] SaveAnswerAsync(SV2380601458.Exams.Dto.SaveAnswerInput) on controller SV2380601458.Exams.Student.StudentExamAppService (SV2380601458.Application).
+INFO  2026-10-17 15:38:44,290 [17   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2026-10-17 15:38:44,290 [17   ] c.Infrastructure.ControllerActionInvoker - Executed action SV2380601458.Exams.Student.StudentExamAppService.SaveAnswerAsync (SV2380601458.Application) in 16.5183ms
+INFO  2026-10-17 15:38:44,290 [17   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'SV2380601458.Exams.Student.StudentExamAppService.SaveAnswerAsync (SV2380601458.Application)'
+INFO  2026-10-17 15:38:44,291 [17   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 POST https://localhost:44311/api/services/app/StudentExam/SaveAnswer - 200 - application/json;+charset=utf-8 19.2153ms
+INFO  2026-10-17 15:38:45,932 [14   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 POST https://localhost:44311/api/services/app/StudentExam/SaveAnswer - application/json 44
+INFO  2026-10-17 15:38:45,933 [14   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2026-10-17 15:38:45,934 [14   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'SV2380601458.Exams.Student.StudentExamAppService.SaveAnswerAsync (SV2380601458.Application)'
+INFO  2026-10-17 15:38:45,935 [14   ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "SaveAnswer", controller = "StudentExam"}. Executing controller action with signature System.Threading.Tasks.Task`1[SV2380601458.Exams.Dto.SaveAnswerOutput] SaveAnswerAsync(SV2380601458.Exams.Dto.SaveAnswerInput) on controller SV2380601458.Exams.Student.StudentExamAppService (SV2380601458.Application).
+INFO  2026-10-17 15:38:45,951 [17   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2026-10-17 15:38:45,952 [17   ] c.Infrastructure.ControllerActionInvoker - Executed action SV2380601458.Exams.Student.StudentExamAppService.SaveAnswerAsync (SV2380601458.Application) in 16.3578ms
+INFO  2026-10-17 15:38:45,952 [17   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'SV2380601458.Exams.Student.StudentExamAppService.SaveAnswerAsync (SV2380601458.Application)'
+INFO  2026-10-17 15:38:45,952 [17   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 POST https://localhost:44311/api/services/app/StudentExam/SaveAnswer - 200 - application/json;+charset=utf-8 19.6108ms
+INFO  2026-10-17 15:38:48,956 [14   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 OPTIONS https://localhost:44311/api/services/app/StudentExam/SaveAnswer - - -
+INFO  2026-10-17 15:38:48,956 [14   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2026-10-17 15:38:48,956 [14   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 OPTIONS https://localhost:44311/api/services/app/StudentExam/SaveAnswer - 204 - - 0.3594ms
+INFO  2026-10-17 15:38:48,959 [17   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 POST https://localhost:44311/api/services/app/StudentExam/SaveAnswer - application/json 47
+INFO  2026-10-17 15:38:48,959 [17   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2026-10-17 15:38:48,960 [17   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'SV2380601458.Exams.Student.StudentExamAppService.SaveAnswerAsync (SV2380601458.Application)'
+INFO  2026-10-17 15:38:48,961 [17   ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "SaveAnswer", controller = "StudentExam"}. Executing controller action with signature System.Threading.Tasks.Task`1[SV2380601458.Exams.Dto.SaveAnswerOutput] SaveAnswerAsync(SV2380601458.Exams.Dto.SaveAnswerInput) on controller SV2380601458.Exams.Student.StudentExamAppService (SV2380601458.Application).
+INFO  2026-10-17 15:38:48,976 [14   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2026-10-17 15:38:48,976 [14   ] c.Infrastructure.ControllerActionInvoker - Executed action SV2380601458.Exams.Student.StudentExamAppService.SaveAnswerAsync (SV2380601458.Application) in 15.2399ms
+INFO  2026-10-17 15:38:48,976 [14   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'SV2380601458.Exams.Student.StudentExamAppService.SaveAnswerAsync (SV2380601458.Application)'
+INFO  2026-10-17 15:38:48,977 [14   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 POST https://localhost:44311/api/services/app/StudentExam/SaveAnswer - 200 - application/json;+charset=utf-8 17.9038ms
+INFO  2026-10-17 15:38:51,717 [14   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 OPTIONS https://localhost:44311/api/services/app/StudentExam/Submit - - -
+INFO  2026-10-17 15:38:51,718 [14   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2026-10-17 15:38:51,718 [14   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 OPTIONS https://localhost:44311/api/services/app/StudentExam/Submit - 204 - - 0.4679ms
+INFO  2026-10-17 15:38:51,721 [17   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 POST https://localhost:44311/api/services/app/StudentExam/Submit - application/json 9
+INFO  2026-10-17 15:38:51,721 [17   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2026-10-17 15:38:51,721 [17   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'SV2380601458.Exams.Student.StudentExamAppService.SubmitAsync (SV2380601458.Application)'
+INFO  2026-10-17 15:38:51,725 [17   ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "Submit", controller = "StudentExam"}. Executing controller action with signature System.Threading.Tasks.Task`1[SV2380601458.Exams.Dto.AttemptResultDto] SubmitAsync(Abp.Application.Services.Dto.EntityDto`1[System.Int64]) on controller SV2380601458.Exams.Student.StudentExamAppService (SV2380601458.Application).
+INFO  2026-10-17 15:38:51,898 [13   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2026-10-17 15:38:51,908 [13   ] c.Infrastructure.ControllerActionInvoker - Executed action SV2380601458.Exams.Student.StudentExamAppService.SubmitAsync (SV2380601458.Application) in 183.4891ms
+INFO  2026-10-17 15:38:51,909 [13   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'SV2380601458.Exams.Student.StudentExamAppService.SubmitAsync (SV2380601458.Application)'
+INFO  2026-10-17 15:38:51,909 [13   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 POST https://localhost:44311/api/services/app/StudentExam/Submit - 200 - application/json;+charset=utf-8 188.0802ms
