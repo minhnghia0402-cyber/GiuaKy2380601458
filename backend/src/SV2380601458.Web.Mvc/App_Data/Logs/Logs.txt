@@ -1,0 +1,231 @@
+DEBUG 2026-10-17 13:40:38,386 [2    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2026-10-17 13:40:39,066 [2    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2026-10-17 13:40:39,086 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: SV2380601458.Web.Startup.SV2380601458WebMvcModule, SV2380601458.Web.Mvc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 13:40:39,088 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: SV2380601458.SV2380601458WebCoreModule, SV2380601458.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 13:40:39,089 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: SV2380601458.SV2380601458ApplicationModule, SV2380601458.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 13:40:39,090 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: SV2380601458.SV2380601458CoreModule, SV2380601458.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 13:40:39,090 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=10.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 13:40:39,091 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=10.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 13:40:39,091 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=10.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 13:40:39,092 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=10.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 13:40:39,092 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: SV2380601458.EntityFrameworkCore.SV2380601458EntityFrameworkModule, SV2380601458.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 13:40:39,092 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=10.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 13:40:39,093 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=10.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 13:40:39,093 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=10.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 13:40:39,093 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=10.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 13:40:39,093 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=10.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 13:40:39,093 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=10.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 13:40:39,095 [2    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2026-10-17 13:40:39,276 [2    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2026-10-17 13:40:39,277 [2    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2026-10-17 13:40:39,277 [2    ] o.Configuration.LanguageManagementConfig - Converted SV2380601458 (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2026-10-17 13:40:39,277 [2    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2026-10-17 13:40:39,704 [2    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: SV2380601458.EntityFrameworkCore.SV2380601458DbContext, SV2380601458.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 13:40:39,938 [2    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2026-10-17 13:40:40,018 [2    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2026-10-17 13:40:40,078 [2    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2026-10-17 13:40:40,102 [2    ] Abp.Localization.LocalizationManager     - Initialized localization source: SV2380601458
+DEBUG 2026-10-17 13:40:40,131 [2    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2026-10-17 13:40:40,143 [2    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2026-10-17 13:40:40,149 [2    ] , Culture=neutral, PublicKeyToken=null]] - Start background worker: Abp.Authorization.Users.UserTokenExpirationWorker`2[[SV2380601458.MultiTenancy.Tenant, SV2380601458.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[SV2380601458.Authorization.Users.User, SV2380601458.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+DEBUG 2026-10-17 13:40:40,176 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 9 classes define auto mapping attributes
+DEBUG 2026-10-17 13:40:40,176 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - SV2380601458.Users.Dto.CreateUserDto
+DEBUG 2026-10-17 13:40:40,180 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - SV2380601458.Users.Dto.UserDto
+DEBUG 2026-10-17 13:40:40,181 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - SV2380601458.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2026-10-17 13:40:40,181 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - SV2380601458.Sessions.Dto.UserLoginInfoDto
+DEBUG 2026-10-17 13:40:40,181 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - SV2380601458.Roles.Dto.PermissionDto
+DEBUG 2026-10-17 13:40:40,181 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - SV2380601458.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2026-10-17 13:40:40,181 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - SV2380601458.MultiTenancy.Dto.TenantDto
+DEBUG 2026-10-17 13:40:40,181 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - SV2380601458.Web.Views.Shared.Components.TenantChange.TenantChangeViewModel
+DEBUG 2026-10-17 13:40:40,181 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - SV2380601458.Web.Models.Roles.EditRoleModalViewModel
+INFO  2026-10-17 13:40:42,628 [2    ] tCore.Builder.RequestLocalizationOptions - Supported Request Localization Cultures: en,es-MX,fr,de,it,nl,pt-BR,tr,ru,ar,fa,ja,zh-Hans
+INFO  2026-10-17 13:40:43,111 [2    ] Microsoft.Hosting.Lifetime               - Now listening on: https://localhost:44312
+INFO  2026-10-17 13:40:43,113 [2    ] Microsoft.Hosting.Lifetime               - Application started. Press Ctrl+C to shut down.
+INFO  2026-10-17 13:40:43,114 [2    ] Microsoft.Hosting.Lifetime               - Hosting environment: Development
+INFO  2026-10-17 13:40:43,114 [2    ] Microsoft.Hosting.Lifetime               - Content root path: C:\Users\minhn\Downloads\kiểm tra\GiuaKy\backend\src\SV2380601458.Web.Mvc
+INFO  2026-10-17 13:42:24,043 [9    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44312/ - - -
+INFO  2026-10-17 13:42:24,160 [9    ] uthorization.DefaultAuthorizationService - Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+INFO  2026-10-17 13:42:24,162 [9    ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was challenged.
+INFO  2026-10-17 13:42:24,171 [9    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44312/ - 302 0 - 123.0728ms
+INFO  2026-10-17 13:42:24,172 [13   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44312/Account/Login?ReturnUrl=%2F - - -
+INFO  2026-10-17 13:42:24,178 [13   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'SV2380601458.Web.Controllers.AccountController.Login (SV2380601458.Web.Mvc)'
+INFO  2026-10-17 13:42:24,226 [13   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "Login", controller = "Account", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Login(System.String, System.String, System.String) on controller SV2380601458.Web.Controllers.AccountController (SV2380601458.Web.Mvc).
+INFO  2026-10-17 13:42:24,662 [5    ] Core.Mvc.ViewFeatures.ViewResultExecutor - Executing ViewResult, running view Login.
+INFO  2026-10-17 13:42:24,902 [15   ] Core.Mvc.ViewFeatures.ViewResultExecutor - Executed ViewResult - view Login executed in 236.2584ms.
+INFO  2026-10-17 13:42:24,904 [15   ] c.Infrastructure.ControllerActionInvoker - Executed action SV2380601458.Web.Controllers.AccountController.Login (SV2380601458.Web.Mvc) in 677.9902ms
+INFO  2026-10-17 13:42:24,905 [15   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'SV2380601458.Web.Controllers.AccountController.Login (SV2380601458.Web.Mvc)'
+INFO  2026-10-17 13:42:24,909 [15   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44312/Account/Login?ReturnUrl=%2F - 200 - text/html;+charset=utf-8 737.1407ms
+INFO  2026-10-17 13:42:24,917 [9    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44312/AbpServiceProxies/GetAll?v=639278412401502077 - - -
+INFO  2026-10-17 13:42:24,917 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44312/view-resources/Views/_Bundles/account-layout.min.js - - -
+INFO  2026-10-17 13:42:24,917 [15   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44312/view-resources/Views/_Bundles/account-layout.min.css - - -
+INFO  2026-10-17 13:42:24,917 [7    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44312/view-resources/Views/Account/Login.js?v=mbhSZ86C5pmN44XAlaYyJaw0nfqN5-ODCoXqV3UJxIs - - -
+INFO  2026-10-17 13:42:24,918 [13   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44312/AbpScripts/GetScripts?v=639278412401502077 - - -
+INFO  2026-10-17 13:42:24,918 [16   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44312/view-resources/Views/Shared/Components/TenantChange/Default.js?v=639278413448857175 - - -
+INFO  2026-10-17 13:42:24,921 [9    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore)'
+INFO  2026-10-17 13:42:24,921 [13   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore)'
+INFO  2026-10-17 13:42:24,921 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44312/view-resources/Views/_Bundles/account-layout.min.js - 404 0 - 4.2577ms
+INFO  2026-10-17 13:42:24,921 [15   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44312/view-resources/Views/_Bundles/account-layout.min.css - 404 0 - 4.2633ms
+INFO  2026-10-17 13:42:24,922 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44312/view-resources/Views/_Bundles/account-layout.min.js, Response status code: 404
+INFO  2026-10-17 13:42:24,922 [15   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44312/view-resources/Views/_Bundles/account-layout.min.css, Response status code: 404
+INFO  2026-10-17 13:42:24,931 [7    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/view-resources/Views/Account/Login.js'. Physical path: 'C:\Users\minhn\Downloads\kiểm tra\GiuaKy\backend\src\SV2380601458.Web.Mvc\wwwroot\view-resources\Views\Account\Login.js'
+INFO  2026-10-17 13:42:24,931 [16   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/view-resources/Views/Shared/Components/TenantChange/Default.js'. Physical path: 'C:\Users\minhn\Downloads\kiểm tra\GiuaKy\backend\src\SV2380601458.Web.Mvc\wwwroot\view-resources\Views\Shared\Components\TenantChange\Default.js'
+INFO  2026-10-17 13:42:24,931 [7    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44312/view-resources/Views/Account/Login.js?v=mbhSZ86C5pmN44XAlaYyJaw0nfqN5-ODCoXqV3UJxIs - 200 410 text/javascript 13.7555ms
+INFO  2026-10-17 13:42:24,931 [16   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44312/view-resources/Views/Shared/Components/TenantChange/Default.js?v=639278413448857175 - 200 370 text/javascript 12.9294ms
+INFO  2026-10-17 13:42:24,935 [13   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "GetScripts", controller = "AbpScripts", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetScripts(System.String, Boolean) on controller Abp.AspNetCore.Mvc.Controllers.AbpScriptsController (Abp.AspNetCore).
+INFO  2026-10-17 13:42:24,935 [9    ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "GetAll", controller = "AbpServiceProxies", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ContentResult GetAll(Abp.AspNetCore.Mvc.Proxying.ApiProxyGenerationModel) on controller Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController (Abp.AspNetCore).
+INFO  2026-10-17 13:42:25,006 [9    ] Mvc.Infrastructure.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript
+INFO  2026-10-17 13:42:25,008 [15   ] c.Infrastructure.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) in 72.7083ms
+INFO  2026-10-17 13:42:25,008 [15   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore)'
+INFO  2026-10-17 13:42:25,009 [15   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44312/AbpServiceProxies/GetAll?v=639278412401502077 - 200 10020 application/x-javascript 91.7652ms
+INFO  2026-10-17 13:42:25,017 [13   ] Mvc.Infrastructure.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript; charset=utf-8
+INFO  2026-10-17 13:42:25,019 [16   ] c.Infrastructure.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) in 84.1551ms
+INFO  2026-10-17 13:42:25,020 [16   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore)'
+INFO  2026-10-17 13:42:25,020 [16   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44312/AbpScripts/GetScripts?v=639278412401502077 - 200 22027 application/x-javascript;+charset=utf-8 102.2626ms
+INFO  2026-10-17 13:42:25,415 [13   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44312/img/favicon.ico - - -
+INFO  2026-10-17 13:42:25,416 [13   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/img/favicon.ico'. Physical path: 'C:\Users\minhn\Downloads\kiểm tra\GiuaKy\backend\src\SV2380601458.Web.Mvc\wwwroot\img\favicon.ico'
+INFO  2026-10-17 13:42:25,416 [13   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44312/img/favicon.ico - 200 1150 image/x-icon 1.7822ms
+INFO  2026-10-17 13:42:36,906 [13   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 POST https://localhost:44312/Account/Login - application/x-www-form-urlencoded 256
+INFO  2026-10-17 13:42:36,908 [13   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'SV2380601458.Web.Controllers.AccountController.Login (SV2380601458.Web.Mvc)'
+INFO  2026-10-17 13:42:36,914 [13   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "Login", controller = "Account", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.JsonResult] Login(SV2380601458.Web.Models.Account.LoginViewModel, System.String, System.String) on controller SV2380601458.Web.Controllers.AccountController (SV2380601458.Web.Mvc).
+INFO  2026-10-17 13:42:37,433 [13   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application signed in.
+INFO  2026-10-17 13:42:37,449 [13   ] rastructure.SystemTextJsonResultExecutor - Executing JsonResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2026-10-17 13:42:37,458 [13   ] c.Infrastructure.ControllerActionInvoker - Executed action SV2380601458.Web.Controllers.AccountController.Login (SV2380601458.Web.Mvc) in 543.606ms
+INFO  2026-10-17 13:42:37,458 [13   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'SV2380601458.Web.Controllers.AccountController.Login (SV2380601458.Web.Mvc)'
+INFO  2026-10-17 13:42:37,459 [13   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 POST https://localhost:44312/Account/Login - 200 - application/json;+charset=utf-8 553.4333ms
+INFO  2026-10-17 13:42:37,554 [9    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44312/favicon.ico - - -
+INFO  2026-10-17 13:42:37,568 [9    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44312/favicon.ico - 404 0 - 13.5970ms
+INFO  2026-10-17 13:42:37,568 [9    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44312/favicon.ico, Response status code: 404
+INFO  2026-10-17 13:54:51,760 [20   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44312/Account/Login - - -
+INFO  2026-10-17 13:54:51,765 [20   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'SV2380601458.Web.Controllers.AccountController.Login (SV2380601458.Web.Mvc)'
+INFO  2026-10-17 13:54:51,766 [20   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "Login", controller = "Account", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Login(System.String, System.String, System.String) on controller SV2380601458.Web.Controllers.AccountController (SV2380601458.Web.Mvc).
+INFO  2026-10-17 13:54:51,794 [20   ] Core.Mvc.ViewFeatures.ViewResultExecutor - Executing ViewResult, running view Login.
+INFO  2026-10-17 13:54:51,888 [5    ] Core.Mvc.ViewFeatures.ViewResultExecutor - Executed ViewResult - view Login executed in 93.8724ms.
+INFO  2026-10-17 13:54:51,888 [5    ] c.Infrastructure.ControllerActionInvoker - Executed action SV2380601458.Web.Controllers.AccountController.Login (SV2380601458.Web.Mvc) in 122.0217ms
+INFO  2026-10-17 13:54:51,888 [5    ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'SV2380601458.Web.Controllers.AccountController.Login (SV2380601458.Web.Mvc)'
+INFO  2026-10-17 13:54:51,889 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44312/Account/Login - 200 - text/html;+charset=utf-8 128.9171ms
+INFO  2026-10-17 13:54:51,917 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44312/view-resources/Views/_Bundles/account-layout.min.css?v=kh16B0ljGuHnjM8Bo7_ErGzEpZD3jym1QicTlxlxG-Y - - -
+INFO  2026-10-17 13:54:51,918 [28   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44312/view-resources/Views/_Bundles/account-layout.min.js?v=sJxF4gZHNSlNNBB4eWYVU-CgrOf2YJJexXY_iwU8G5s - - -
+INFO  2026-10-17 13:54:51,919 [20   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44312/AbpServiceProxies/GetAll?v=639278412401502077 - - -
+INFO  2026-10-17 13:54:51,919 [24   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44312/view-resources/Views/Shared/Components/TenantChange/Default.js?v=639278420918873365 - - -
+INFO  2026-10-17 13:54:51,920 [30   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44312/AbpScripts/GetScripts?v=639278412401502077 - - -
+INFO  2026-10-17 13:54:51,924 [20   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore)'
+INFO  2026-10-17 13:54:51,924 [30   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore)'
+INFO  2026-10-17 13:54:51,924 [30   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "GetScripts", controller = "AbpScripts", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetScripts(System.String, Boolean) on controller Abp.AspNetCore.Mvc.Controllers.AbpScriptsController (Abp.AspNetCore).
+INFO  2026-10-17 13:54:51,924 [20   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "GetAll", controller = "AbpServiceProxies", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ContentResult GetAll(Abp.AspNetCore.Mvc.Proxying.ApiProxyGenerationModel) on controller Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController (Abp.AspNetCore).
+INFO  2026-10-17 13:54:51,925 [5    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/view-resources/Views/Shared/Components/TenantChange/Default.js'. Physical path: 'C:\Users\minhn\Downloads\kiểm tra\GiuaKy\backend\src\SV2380601458.Web.Mvc\wwwroot\view-resources\Views\Shared\Components\TenantChange\Default.js'
+INFO  2026-10-17 13:54:51,925 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44312/view-resources/Views/Shared/Components/TenantChange/Default.js?v=639278420918873365 - 200 370 text/javascript 5.7630ms
+INFO  2026-10-17 13:54:51,931 [20   ] Mvc.Infrastructure.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript
+INFO  2026-10-17 13:54:51,931 [24   ] c.Infrastructure.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) in 6.5815ms
+INFO  2026-10-17 13:54:51,931 [24   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore)'
+INFO  2026-10-17 13:54:51,931 [24   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44312/AbpServiceProxies/GetAll?v=639278412401502077 - 200 10020 application/x-javascript 12.0955ms
+INFO  2026-10-17 13:54:51,949 [5    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/view-resources/Views/_Bundles/account-layout.min.js'. Physical path: 'C:\Users\minhn\Downloads\kiểm tra\GiuaKy\backend\src\SV2380601458.Web.Mvc\wwwroot\view-resources\Views\_Bundles\account-layout.min.js'
+INFO  2026-10-17 13:54:51,949 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44312/view-resources/Views/_Bundles/account-layout.min.js?v=sJxF4gZHNSlNNBB4eWYVU-CgrOf2YJJexXY_iwU8G5s - 200 1433674 text/javascript 31.4884ms
+INFO  2026-10-17 13:54:51,951 [28   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/view-resources/Views/_Bundles/account-layout.min.css'. Physical path: 'C:\Users\minhn\Downloads\kiểm tra\GiuaKy\backend\src\SV2380601458.Web.Mvc\wwwroot\view-resources\Views\_Bundles\account-layout.min.css'
+INFO  2026-10-17 13:54:51,952 [28   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44312/view-resources/Views/_Bundles/account-layout.min.css?v=kh16B0ljGuHnjM8Bo7_ErGzEpZD3jym1QicTlxlxG-Y - 200 1668624 text/css 34.5912ms
+INFO  2026-10-17 13:54:52,022 [28   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44312/dist/img/famfamfam-flags.png - - -
+INFO  2026-10-17 13:54:52,036 [28   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/dist/img/famfamfam-flags.png'. Physical path: 'C:\Users\minhn\Downloads\kiểm tra\GiuaKy\backend\src\SV2380601458.Web.Mvc\wwwroot\dist\img\famfamfam-flags.png'
+INFO  2026-10-17 13:54:52,036 [28   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44312/dist/img/famfamfam-flags.png - 200 78508 image/png 13.6191ms
+INFO  2026-10-17 13:54:52,081 [24   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44312/dist/fonts/fa-solid-900.woff2 - - -
+INFO  2026-10-17 13:54:52,100 [5    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/dist/fonts/fa-solid-900.woff2'. Physical path: 'C:\Users\minhn\Downloads\kiểm tra\GiuaKy\backend\src\SV2380601458.Web.Mvc\wwwroot\dist\fonts\fa-solid-900.woff2'
+INFO  2026-10-17 13:54:52,100 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44312/dist/fonts/fa-solid-900.woff2 - 200 78196 font/woff2 18.8238ms
+INFO  2026-10-17 13:54:52,160 [5    ] Mvc.Infrastructure.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript; charset=utf-8
+INFO  2026-10-17 13:54:52,161 [24   ] c.Infrastructure.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) in 236.3286ms
+INFO  2026-10-17 13:54:52,161 [24   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore)'
+INFO  2026-10-17 13:54:52,161 [24   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44312/AbpScripts/GetScripts?v=639278412401502077 - 200 23412 application/x-javascript;+charset=utf-8 241.0891ms
+INFO  2026-10-17 13:55:32,170 [28   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 POST https://localhost:44312/Account/Login - application/x-www-form-urlencoded 319
+INFO  2026-10-17 13:55:32,172 [28   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'SV2380601458.Web.Controllers.AccountController.Login (SV2380601458.Web.Mvc)'
+INFO  2026-10-17 13:55:32,173 [28   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "Login", controller = "Account", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.JsonResult] Login(SV2380601458.Web.Models.Account.LoginViewModel, System.String, System.String) on controller SV2380601458.Web.Controllers.AccountController (SV2380601458.Web.Mvc).
+WARN  2026-10-17 13:55:32,270 [28   ] Mvc.ExceptionHandling.AbpExceptionFilter - Login failed!
+Abp.UI.UserFriendlyException: Login failed!
+   at SV2380601458.Web.Controllers.AccountController.GetLoginResultAsync(String usernameOrEmailAddress, String password, String tenancyName) in C:\Users\minhn\Downloads\kiểm tra\GiuaKy\backend\src\SV2380601458.Web.Mvc\Controllers\AccountController.cs:line 126
+   at SV2380601458.Web.Controllers.AccountController.Login(LoginViewModel loginModel, String returnUrl, String returnUrlHash) in C:\Users\minhn\Downloads\kiểm tra\GiuaKy\backend\src\SV2380601458.Web.Mvc\Controllers\AccountController.cs:line 103
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.InternalInterceptAsynchronous[TResult](IInvocation invocation)
+   at lambda_method1969(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+INFO  2026-10-17 13:55:32,276 [28   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2026-10-17 13:55:32,281 [28   ] c.Infrastructure.ControllerActionInvoker - Executed action SV2380601458.Web.Controllers.AccountController.Login (SV2380601458.Web.Mvc) in 107.765ms
+INFO  2026-10-17 13:55:32,281 [28   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'SV2380601458.Web.Controllers.AccountController.Login (SV2380601458.Web.Mvc)'
+INFO  2026-10-17 13:55:32,281 [28   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 POST https://localhost:44312/Account/Login - 500 - application/json;+charset=utf-8 111.7464ms
+INFO  2026-10-17 13:55:40,119 [28   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 POST https://localhost:44312/Account/Login - application/x-www-form-urlencoded 303
+INFO  2026-10-17 13:55:40,121 [28   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'SV2380601458.Web.Controllers.AccountController.Login (SV2380601458.Web.Mvc)'
+INFO  2026-10-17 13:55:40,121 [28   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "Login", controller = "Account", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.JsonResult] Login(SV2380601458.Web.Models.Account.LoginViewModel, System.String, System.String) on controller SV2380601458.Web.Controllers.AccountController (SV2380601458.Web.Mvc).
+WARN  2026-10-17 13:55:40,142 [28   ] Mvc.ExceptionHandling.AbpExceptionFilter - Login failed!
+Abp.UI.UserFriendlyException: Login failed!
+   at SV2380601458.Web.Controllers.AccountController.GetLoginResultAsync(String usernameOrEmailAddress, String password, String tenancyName) in C:\Users\minhn\Downloads\kiểm tra\GiuaKy\backend\src\SV2380601458.Web.Mvc\Controllers\AccountController.cs:line 126
+   at SV2380601458.Web.Controllers.AccountController.Login(LoginViewModel loginModel, String returnUrl, String returnUrlHash) in C:\Users\minhn\Downloads\kiểm tra\GiuaKy\backend\src\SV2380601458.Web.Mvc\Controllers\AccountController.cs:line 103
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.InternalInterceptAsynchronous[TResult](IInvocation invocation)
+   at lambda_method1969(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+INFO  2026-10-17 13:55:40,143 [28   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2026-10-17 13:55:40,143 [28   ] c.Infrastructure.ControllerActionInvoker - Executed action SV2380601458.Web.Controllers.AccountController.Login (SV2380601458.Web.Mvc) in 22.0996ms
+INFO  2026-10-17 13:55:40,144 [28   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'SV2380601458.Web.Controllers.AccountController.Login (SV2380601458.Web.Mvc)'
+INFO  2026-10-17 13:55:40,144 [28   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 POST https://localhost:44312/Account/Login - 500 - application/json;+charset=utf-8 25.2582ms
+INFO  2026-10-17 13:55:48,108 [24   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 POST https://localhost:44312/Account/Login - application/x-www-form-urlencoded 304
+INFO  2026-10-17 13:55:48,110 [24   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'SV2380601458.Web.Controllers.AccountController.Login (SV2380601458.Web.Mvc)'
+INFO  2026-10-17 13:55:48,111 [24   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "Login", controller = "Account", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.JsonResult] Login(SV2380601458.Web.Models.Account.LoginViewModel, System.String, System.String) on controller SV2380601458.Web.Controllers.AccountController (SV2380601458.Web.Mvc).
+INFO  2026-10-17 13:55:48,234 [24   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application signed in.
+INFO  2026-10-17 13:55:48,242 [24   ] rastructure.SystemTextJsonResultExecutor - Executing JsonResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2026-10-17 13:55:48,242 [24   ] c.Infrastructure.ControllerActionInvoker - Executed action SV2380601458.Web.Controllers.AccountController.Login (SV2380601458.Web.Mvc) in 131.2198ms
+INFO  2026-10-17 13:55:48,242 [24   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'SV2380601458.Web.Controllers.AccountController.Login (SV2380601458.Web.Mvc)'
+INFO  2026-10-17 13:55:48,243 [24   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 POST https://localhost:44312/Account/Login - 200 - application/json;+charset=utf-8 134.8061ms
+INFO  2026-10-17 13:55:48,260 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44312/About - - -
+INFO  2026-10-17 13:55:48,263 [5    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'SV2380601458.Web.Controllers.AboutController.Index (SV2380601458.Web.Mvc)'
+INFO  2026-10-17 13:55:48,265 [5    ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "Index", controller = "About", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Index() on controller SV2380601458.Web.Controllers.AboutController (SV2380601458.Web.Mvc).
+INFO  2026-10-17 13:55:48,282 [28   ] Core.Mvc.ViewFeatures.ViewResultExecutor - Executing ViewResult, running view Index.
+INFO  2026-10-17 13:55:48,459 [5    ] Core.Mvc.ViewFeatures.ViewResultExecutor - Executed ViewResult - view Index executed in 178.8719ms.
+INFO  2026-10-17 13:55:48,459 [5    ] c.Infrastructure.ControllerActionInvoker - Executed action SV2380601458.Web.Controllers.AboutController.Index (SV2380601458.Web.Mvc) in 193.89ms
+INFO  2026-10-17 13:55:48,459 [5    ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'SV2380601458.Web.Controllers.AboutController.Index (SV2380601458.Web.Mvc)'
+INFO  2026-10-17 13:55:48,460 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44312/About - 200 - text/html;+charset=utf-8 200.1375ms
+INFO  2026-10-17 13:55:48,499 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44312/view-resources/Views/_Bundles/shared-layout.min.css?v=2JgH3l8w67_GazpOLzhgPLwDTROeYI-Dm8MfkKH0Vw0 - - -
+INFO  2026-10-17 13:55:48,499 [24   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44312/img/avatar.png - - -
+INFO  2026-10-17 13:55:48,501 [24   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/img/avatar.png'. Physical path: 'C:\Users\minhn\Downloads\kiểm tra\GiuaKy\backend\src\SV2380601458.Web.Mvc\wwwroot\img\avatar.png'
+INFO  2026-10-17 13:55:48,501 [24   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44312/img/avatar.png - 200 7587 image/png 1.5657ms
+INFO  2026-10-17 13:55:48,502 [21   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44312/img/logo.png - - -
+INFO  2026-10-17 13:55:48,502 [26   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44312/view-resources/Views/_Bundles/shared-layout.min.js?v=y1DahlgCggLia06TBmLdU1tMgmvsj_lgjisIHxPESQU - - -
+INFO  2026-10-17 13:55:48,503 [25   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44312/AbpScripts/GetScripts?v=639278412401502077 - - -
+INFO  2026-10-17 13:55:48,503 [28   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44312/AbpServiceProxies/GetAll?v=639278412401502077 - - -
+INFO  2026-10-17 13:55:48,504 [24   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/img/logo.png'. Physical path: 'C:\Users\minhn\Downloads\kiểm tra\GiuaKy\backend\src\SV2380601458.Web.Mvc\wwwroot\img\logo.png'
+INFO  2026-10-17 13:55:48,504 [24   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44312/img/logo.png - 200 4327 image/png 1.9806ms
+INFO  2026-10-17 13:55:48,506 [25   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore)'
+INFO  2026-10-17 13:55:48,506 [28   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore)'
+INFO  2026-10-17 13:55:48,506 [25   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "GetScripts", controller = "AbpScripts", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetScripts(System.String, Boolean) on controller Abp.AspNetCore.Mvc.Controllers.AbpScriptsController (Abp.AspNetCore).
+INFO  2026-10-17 13:55:48,506 [28   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "GetAll", controller = "AbpServiceProxies", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ContentResult GetAll(Abp.AspNetCore.Mvc.Proxying.ApiProxyGenerationModel) on controller Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController (Abp.AspNetCore).
+INFO  2026-10-17 13:55:48,508 [28   ] Mvc.Infrastructure.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript
+INFO  2026-10-17 13:55:48,519 [25   ] Mvc.Infrastructure.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript; charset=utf-8
+INFO  2026-10-17 13:55:48,526 [20   ] c.Infrastructure.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) in 19.0363ms
+INFO  2026-10-17 13:55:48,526 [25   ] c.Infrastructure.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) in 19.2153ms
+INFO  2026-10-17 13:55:48,526 [20   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore)'
+INFO  2026-10-17 13:55:48,526 [25   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore)'
+INFO  2026-10-17 13:55:48,526 [25   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44312/AbpScripts/GetScripts?v=639278412401502077 - 200 23412 application/x-javascript;+charset=utf-8 22.8930ms
+INFO  2026-10-17 13:55:48,526 [20   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44312/AbpServiceProxies/GetAll?v=639278412401502077 - 200 10020 application/x-javascript 22.8933ms
+INFO  2026-10-17 13:55:48,538 [24   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/view-resources/Views/_Bundles/shared-layout.min.css'. Physical path: 'C:\Users\minhn\Downloads\kiểm tra\GiuaKy\backend\src\SV2380601458.Web.Mvc\wwwroot\view-resources\Views\_Bundles\shared-layout.min.css'
+INFO  2026-10-17 13:55:48,538 [24   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44312/view-resources/Views/_Bundles/shared-layout.min.css?v=2JgH3l8w67_GazpOLzhgPLwDTROeYI-Dm8MfkKH0Vw0 - 200 1698125 text/css 38.5138ms
+INFO  2026-10-17 13:55:48,542 [5    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/view-resources/Views/_Bundles/shared-layout.min.js'. Physical path: 'C:\Users\minhn\Downloads\kiểm tra\GiuaKy\backend\src\SV2380601458.Web.Mvc\wwwroot\view-resources\Views\_Bundles\shared-layout.min.js'
+INFO  2026-10-17 13:55:48,542 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44312/view-resources/Views/_Bundles/shared-layout.min.js?v=y1DahlgCggLia06TBmLdU1tMgmvsj_lgjisIHxPESQU - 200 1801982 text/javascript 39.8831ms
+INFO  2026-10-17 13:55:48,585 [25   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44312/dist/img/famfamfam-flags.png - - -
+INFO  2026-10-17 13:55:48,585 [24   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44312/dist/fonts/fa-solid-900.woff2 - - -
+INFO  2026-10-17 13:55:48,587 [24   ] NetCore.StaticFiles.StaticFileMiddleware - The file /dist/fonts/fa-solid-900.woff2 was not modified
+INFO  2026-10-17 13:55:48,587 [25   ] NetCore.StaticFiles.StaticFileMiddleware - The file /dist/img/famfamfam-flags.png was not modified
+INFO  2026-10-17 13:55:48,587 [25   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44312/dist/img/famfamfam-flags.png - 304 - image/png 1.9371ms
+INFO  2026-10-17 13:55:48,587 [24   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44312/dist/fonts/fa-solid-900.woff2 - 304 - font/woff2 1.8709ms
+INFO  2026-10-17 13:55:48,646 [24   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 POST https://localhost:44312/signalr/negotiate?negotiateVersion=1 - - 0
+INFO  2026-10-17 13:55:48,648 [24   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint '/signalr/negotiate'
+INFO  2026-10-17 13:55:48,654 [24   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint '/signalr/negotiate'
+INFO  2026-10-17 13:55:48,654 [24   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 POST https://localhost:44312/signalr/negotiate?negotiateVersion=1 - 200 316 application/json 8.1597ms
+INFO  2026-10-17 13:55:48,704 [24   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 CONNECT https://localhost:44312/signalr?id=zkKtMdSLD5SmuDY95Fw-Ww - - -
+INFO  2026-10-17 13:55:48,706 [24   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint '/signalr'
+DEBUG 2026-10-17 13:55:48,751 [21   ] Abp.AspNetCore.SignalR.Hubs.AbpCommonHub - A client is connected: {"ConnectionId":"x4A4wIc7AJ2kz1fKedEXZA","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2026-10-17T13:55:48.7338319+07:00","Properties":{}}
+DEBUG 2026-10-17 13:55:48,761 [21   ] Abp.AspNetCore.SignalR.Hubs.AbpCommonHub - A client is registered: x4A4wIc7AJ2kz1fKedEXZA
