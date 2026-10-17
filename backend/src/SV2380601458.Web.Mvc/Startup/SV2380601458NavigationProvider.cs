@@ -19,7 +19,7 @@ public class SV2380601458NavigationProvider : NavigationProvider
                         new FixedLocalizableString("Quản lý đề thi"),
                         url: "Exams",
                         icon: "fas fa-file-alt",
-                        requiresAuthentication: true
+                        permissionDependency: new SimplePermissionDependency("Pages.Exams")
                     )
                 )
             .AddItem(
@@ -161,3 +161,5 @@ public class SV2380601458NavigationProvider : NavigationProvider
         return new LocalizableString(name, SV2380601458Consts.LocalizationSourceName);
     }
 }
+
+

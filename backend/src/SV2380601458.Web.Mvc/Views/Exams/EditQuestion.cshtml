@@ -1,0 +1,72 @@
+@using SV2380601458.Exams
+@using SV2380601458.Exams.Dto
+@model QuestionEditDto
+@{
+    var q = Model.Question;
+    ViewBag.Title = $"Sửa câu {q.QuestionNumber}";
+    ViewBag.CurrentPageName = "Exams";
+    var locked = Model.ExamStatus == ExamStatus.Published;
+}
+
+<section class="content-header">
+    <div class="container-fluid">
+        <h1>Sửa câu @q.QuestionNumber <small class="text-muted">· Part @q.PartNumber · @Model.ExamTitle</small></h1>
+    </div>
+</section>
+
+<section class="content">
+    <div class="container-fluid">
+        <partial name="_ExamAlerts" />
+        @if (locked)
+        {
+            <div class="alert alert-warning">Đề đang mở thi nên không thể chỉnh sửa. Hãy đóng đề trước.</div>
+        }
+
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="card card-primary card-outline">
+                    <form asp-action="EditQuestion" method="post">
+                        <input type="hidden" name="Id" value="@q.Id" />
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label>Nội dung câu hỏi @(q.PartNumber == 6 ? "(Part 6 có thể để trống)" : "")</label>
+                                <textarea name="Content" class="form-control" rows="3" required="@(q.PartNumber != 6)">@q.Content</textarea>
+                            </div>
+
+                            <label>Các đáp án <small class="text-muted">(chọn nút tròn ở đáp án đúng)</small></label>
+                            @for (int i = 0; i < q.Options.Count; i++)
+                            {
+                                var o = q.Options[i];
+                                <div class="input-group mb-2">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">
+                                            <input type="radio" name="CorrectOptionId" value="@o.Id" checked="@o.IsCorrect" required />
+                                            <b class="ml-2">(@o.Label)</b>
+                                        </div>
+                                    </div>
+                                    <input type="hidden" name="Options[@i].Id" value="@o.Id" />
+                                    <input type="text" name="Options[@i].Content" value="@o.Content" class="form-control" required />
+                                </div>
+                            }
+
+                            <div class="form-group mt-3">
+                                <label>Gợi ý / giải thích đáp án</label>
+                                <textarea name="Hint" class="form-control" rows="3" required>@q.Hint</textarea>
+                            </div>
+
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="shuffleA" name="AllowShuffleAnswers" value="true" checked="@q.AllowShuffleAnswers" />
+                                <label class="custom-control-label" for="shuffleA">Cho phép hoán vị đáp án khi thi</label>
+                            </div>
+                            <input type="hidden" name="AllowShuffleAnswers" value="false" />
+                        </div>
+                        <div class="card-footer">
+                            <button type="submit" class="btn btn-primary" disabled="@locked"><i class="fas fa-save"></i> Lưu câu hỏi</button>
+                            <a href="@Url.Action("Detail", new { id = Model.ExamId })#q@(q.QuestionNumber)" class="btn btn-outline-secondary">Huỷ</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

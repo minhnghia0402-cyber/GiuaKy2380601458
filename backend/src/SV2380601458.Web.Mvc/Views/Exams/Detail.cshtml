@@ -1,0 +1,173 @@
+@using Microsoft.AspNetCore.Mvc.ViewFeatures
+@using SV2380601458.Exams
+@using SV2380601458.Exams.Dto
+@model ExamDetailDto
+@{
+    ViewBag.Title = Model.Title;
+    ViewBag.CurrentPageName = "Exams";
+    var editable = Model.Status != ExamStatus.Published;
+}
+
+<style>
+    .exam-toc a { margin-right: 6px; }
+    .part-header { background: #1f4e79; color: #fff; border-radius: 6px; padding: 10px 16px; margin: 24px 0 12px; }
+    .part-header small { color: #d6e4f0; }
+    .group-card { border-left: 4px solid #3c8dbc; }
+    .passage { background: #fafafa; border: 1px solid #e3e3e3; border-radius: 6px; padding: 14px 16px; margin-bottom: 12px; position: relative; }
+    .passage p { margin-bottom: 6px; }
+    .passage .passage-image { text-align: center; margin: 6px 0; }
+    .passage .passage-image img { max-width: 100%; height: auto; border: 1px solid #ddd; }
+    .passage .blank { font-weight: bold; color: #c00000; white-space: nowrap; }
+    .passage table.passage-table td { border: 1px solid #ccc; padding: 4px 8px; }
+    .passage .edit-btn { position: absolute; top: 8px; right: 8px; }
+    .question { border-bottom: 1px dashed #ddd; padding: 12px 0; scroll-margin-top: 80px; }
+    .question:last-child { border-bottom: none; }
+    .q-number { display: inline-block; min-width: 46px; font-weight: bold; color: #1f4e79; }
+    .q-content { white-space: pre-line; }
+    .options { list-style: none; padding-left: 46px; margin: 6px 0; }
+    .options li { padding: 3px 8px; border-radius: 4px; margin-bottom: 2px; }
+    .options li.correct { background: #e6f4ea; color: #1e7e34; font-weight: 600; }
+    .hint { margin-left: 46px; font-size: 0.9rem; color: #6c757d; background: #fff8e1; border-radius: 4px; padding: 6px 10px; }
+    .hide-answers .options li.correct { background: transparent; color: inherit; font-weight: normal; }
+    .hide-answers .options li.correct .fa-check { display: none; }
+    .hide-answers .hint { display: none; }
+    .flag { font-size: 0.7rem; font-weight: normal; }
+</style>
+
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-md-7">
+                <h1>@Model.Title</h1>
+                <div class="text-muted">
+                    <i class="far fa-file-word"></i> @Model.SourceFileName ·
+                    @Model.TotalQuestions câu · @Model.DurationMinutes phút ·
+                    @Model.AttemptCount lượt thi
+                </div>
+            </div>
+            <div class="col-md-5 text-md-right mt-2 mt-md-0">
+                <a asp-action="Index" class="btn btn-outline-secondary btn-sm"><i class="fas fa-arrow-left"></i> Danh sách</a>
+                <a asp-action="Statistics" asp-route-id="@Model.Id" class="btn btn-info btn-sm"><i class="fas fa-chart-bar"></i> Thống kê</a>
+                @if (editable)
+                {
+                    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-outline-primary btn-sm"><i class="fas fa-pen"></i> Sửa thông tin</a>
+                }
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content">
+    <div class="container-fluid">
+        <partial name="_ExamAlerts" />
+
+        @* ---------- Trạng thái & xuất bản ---------- *@
+        <div class="card">
+            <div class="card-body d-flex flex-wrap align-items-center justify-content-between">
+                <div class="mb-2 mb-md-0">
+                    @switch (Model.Status)
+                    {
+                        case ExamStatus.Draft:
+                            <span class="badge badge-secondary p-2">BẢN NHÁP</span>
+                            <span class="ml-2">Rà soát nội dung, sửa lỗi nếu có, rồi bấm <b>Xuất bản</b> để sinh viên bắt đầu thi.</span>
+                            break;
+                        case ExamStatus.Published:
+                            <span class="badge badge-success p-2">ĐANG MỞ THI</span>
+                            <span class="ml-2">Xuất bản lúc @Model.PublishedTime?.ToString("dd/MM/yyyy HH:mm"). Muốn chỉnh sửa, hãy đóng đề trước.</span>
+                            break;
+                        default:
+                            <span class="badge badge-dark p-2">ĐÃ ĐÓNG</span>
+                            <span class="ml-2">Sinh viên không thể bắt đầu lượt thi mới. Có thể chỉnh sửa và xuất bản lại.</span>
+                            break;
+                    }
+                </div>
+                <div>
+                    <div class="custom-control custom-switch d-inline-block mr-3">
+                        <input type="checkbox" class="custom-control-input" id="toggleAnswers" checked>
+                        <label class="custom-control-label" for="toggleAnswers">Hiện đáp án &amp; gợi ý</label>
+                    </div>
+                    @if (Model.Status == ExamStatus.Published)
+                    {
+                        <form asp-action="Close" asp-route-id="@Model.Id" method="post" class="d-inline"
+                              onsubmit="return confirm('Đóng đề này? Sinh viên sẽ không thể bắt đầu lượt thi mới.');">
+                            <button class="btn btn-warning"><i class="fas fa-lock"></i> Đóng đề</button>
+                        </form>
+                    }
+                    else
+                    {
+                        <form asp-action="Publish" asp-route-id="@Model.Id" method="post" class="d-inline"
+                              onsubmit="return confirm('Xuất bản đề này cho sinh viên thi?');">
+                            <button class="btn btn-success"><i class="fas fa-paper-plane"></i> Xuất bản</button>
+                        </form>
+                    }
+                </div>
+            </div>
+        </div>
+
+        @* ---------- Mục lục nhanh ---------- *@
+        <div class="exam-toc mb-2">
+            @foreach (var p in Model.Parts)
+            {
+                <a href="#part@(p.PartNumber)" class="btn btn-sm btn-light border">Part @p.PartNumber</a>
+            }
+        </div>
+
+        <div id="examBody">
+            @foreach (var part in Model.Parts)
+            {
+                <div class="part-header" id="part@(part.PartNumber)">
+                    <h4 class="mb-1">PART @part.PartNumber
+                        @if (part.AllowShuffle) { <span class="badge badge-light flag">hoán vị @(part.PartNumber == 5 ? "câu hỏi" : "nhóm")</span> }
+                    </h4>
+                    <small>@part.Directions</small>
+                </div>
+
+                @* Part 5: câu độc lập *@
+                @if (part.Questions.Count > 0)
+                {
+                    <div class="card"><div class="card-body py-1">
+                        @foreach (var q in part.Questions)
+                        {
+                            @await Html.PartialAsync("_QuestionPreview", q, new ViewDataDictionary(ViewData) { { "Editable", editable } })
+                        }
+                    </div></div>
+                }
+
+                @* Part 6, 7: nhóm câu hỏi theo bài đọc *@
+                @foreach (var g in part.Groups)
+                {
+                    <div class="card group-card">
+                        <div class="card-header">
+                            <b>Câu @g.FromNumber - @g.ToNumber</b>
+                            @if (g.AllowShuffleQuestions) { <span class="badge badge-info flag">hoán vị câu hỏi</span> }
+                        </div>
+                        <div class="card-body">
+                            @foreach (var ps in g.Passages)
+                            {
+                                <div class="passage" id="p@(ps.Id)">
+                                    @if (editable)
+                                    {
+                                        <a asp-action="EditPassage" asp-route-id="@ps.Id" class="btn btn-xs btn-outline-primary edit-btn"><i class="fas fa-pen"></i> Sửa bài đọc</a>
+                                    }
+                                    @Html.Raw(ps.Content)
+                                </div>
+                            }
+                            @foreach (var q in g.Questions)
+                            {
+                                @await Html.PartialAsync("_QuestionPreview", q, new ViewDataDictionary(ViewData) { { "Editable", editable } })
+                            }
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+</section>
+
+@section scripts {
+    <script>
+        $('#toggleAnswers').on('change', function () {
+            $('#examBody').toggleClass('hide-answers', !this.checked);
+        });
+    </script>
+}

@@ -1,0 +1,41 @@
+@using SV2380601458.Exams.Dto
+@model UpdateExamInfoInput
+@{
+    ViewBag.Title = "Sửa thông tin đề";
+    ViewBag.CurrentPageName = "Exams";
+}
+
+<section class="content-header">
+    <div class="container-fluid">
+        <h1>Sửa thông tin đề thi</h1>
+    </div>
+</section>
+
+<section class="content">
+    <div class="container-fluid">
+        <partial name="_ExamAlerts" />
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="card card-primary card-outline">
+                    <form asp-action="Edit" method="post">
+                        <input type="hidden" name="Id" value="@Model.Id" />
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label>Tên đề</label>
+                                <input type="text" name="Title" value="@Model.Title" class="form-control" maxlength="256" required />
+                            </div>
+                            <div class="form-group">
+                                <label>Thời gian làm bài (phút)</label>
+                                <input type="number" name="DurationMinutes" value="@Model.DurationMinutes" class="form-control" min="1" max="300" required />
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Lưu</button>
+                            <a asp-action="Detail" asp-route-id="@Model.Id" class="btn btn-outline-secondary">Huỷ</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

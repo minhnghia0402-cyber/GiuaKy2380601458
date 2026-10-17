@@ -1,0 +1,76 @@
+@using SV2380601458.Exams
+@using SV2380601458.Exams.Dto
+@model PassageEditDto
+@{
+    ViewBag.Title = "Sửa bài đọc";
+    ViewBag.CurrentPageName = "Exams";
+    var locked = Model.ExamStatus == ExamStatus.Published;
+}
+
+<style>
+    .preserved img { max-width: 100%; border: 1px solid #ddd; }
+    .preserved .passage-image { text-align: center; }
+</style>
+
+<section class="content-header">
+    <div class="container-fluid">
+        <h1>Sửa bài đọc <small class="text-muted">· Part @Model.PartNumber · @Model.GroupLabel · @Model.ExamTitle</small></h1>
+    </div>
+</section>
+
+<section class="content">
+    <div class="container-fluid">
+        <partial name="_ExamAlerts" />
+        @if (locked)
+        {
+            <div class="alert alert-warning">Đề đang mở thi nên không thể chỉnh sửa. Hãy đóng đề trước.</div>
+        }
+
+        <form asp-action="EditPassage" method="post" enctype="multipart/form-data">
+            <input type="hidden" name="passageId" value="@Model.PassageId" />
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="card card-primary card-outline">
+                        <div class="card-header"><h3 class="card-title">Nội dung chữ</h3></div>
+                        <div class="card-body">
+                            <textarea name="text" class="form-control" rows="16" style="font-family: Consolas, monospace">@Model.Text</textarea>
+                            <small class="form-text text-muted">
+                                Mỗi dòng là một đoạn văn.
+                                @if (Model.PartNumber == 6)
+                                {
+                                    <span>Giữ đúng các chỗ trống dạng <code>[BLANK 131]</code>, hệ thống sẽ kiểm tra khớp với câu hỏi của nhóm.</span>
+                                }
+                            </small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card card-primary card-outline">
+                        <div class="card-header"><h3 class="card-title">Ảnh / bảng của bài đọc</h3></div>
+                        <div class="card-body">
+                            @if (Model.PreservedBlocks.Count == 0)
+                            {
+                                <p class="text-muted">Bài đọc này không có ảnh.</p>
+                            }
+                            else
+                            {
+                                <div class="preserved mb-3">
+                                    @foreach (var block in Model.PreservedBlocks) { @Html.Raw(block) }
+                                </div>
+                                <div class="custom-control custom-checkbox mb-3">
+                                    <input type="checkbox" class="custom-control-input" id="removeImages" name="removeImages" value="true" />
+                                    <label class="custom-control-label" for="removeImages">Xoá ảnh/bảng hiện tại</label>
+                                </div>
+                            }
+                            <label>Thay bằng ảnh mới (tuỳ chọn)</label>
+                            <input type="file" name="image" accept="image/*" class="form-control" style="height:auto" />
+                            <small class="form-text text-muted">Nếu chọn ảnh mới, ảnh cũ sẽ được thay thế. Tối đa 5 MB.</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary" disabled="@locked"><i class="fas fa-save"></i> Lưu bài đọc</button>
+            <a href="@Url.Action("Detail", new { id = Model.ExamId })#p@(Model.PassageId)" class="btn btn-outline-secondary">Huỷ</a>
+        </form>
+    </div>
+</section>

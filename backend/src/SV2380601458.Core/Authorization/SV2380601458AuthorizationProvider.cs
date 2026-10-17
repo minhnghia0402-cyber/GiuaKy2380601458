@@ -8,6 +8,7 @@ public class SV2380601458AuthorizationProvider : AuthorizationProvider
 {
     public override void SetPermissions(IPermissionDefinitionContext context)
     {
+            context.CreatePermission("Pages.Exams", new FixedLocalizableString("Quản lý đề thi"));
         context.CreatePermission(PermissionNames.Pages_Users, L("Users"));
         context.CreatePermission(PermissionNames.Pages_Users_Activation, L("UsersActivation"));
         context.CreatePermission(PermissionNames.Pages_Roles, L("Roles"));
@@ -19,3 +20,5 @@ public class SV2380601458AuthorizationProvider : AuthorizationProvider
         return new LocalizableString(name, SV2380601458Consts.LocalizationSourceName);
     }
 }
+
+

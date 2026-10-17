@@ -1,0 +1,37 @@
+@using SV2380601458.Exams.Dto
+@model QuestionDto
+@{
+    var editable = ViewData["Editable"] is bool b && b;
+}
+<div class="question" id="q@(Model.QuestionNumber)">
+    <div class="d-flex justify-content-between">
+        <div>
+            <span class="q-number">@Model.QuestionNumber.</span>
+            @if (!string.IsNullOrEmpty(Model.Content))
+            {
+                <span class="q-content">@Model.Content</span>
+            }
+            else
+            {
+                <span class="text-muted font-italic">(Chọn đáp án cho chỗ trống số @Model.QuestionNumber trong bài đọc)</span>
+            }
+            @if (Model.AllowShuffleAnswers) { <span class="badge badge-light border flag">hoán vị đáp án</span> }
+        </div>
+        @if (editable)
+        {
+            <a asp-action="EditQuestion" asp-route-id="@Model.Id" class="btn btn-xs btn-outline-primary text-nowrap ml-2 align-self-start">
+                <i class="fas fa-pen"></i> Sửa
+            </a>
+        }
+    </div>
+    <ul class="options">
+        @foreach (var o in Model.Options)
+        {
+            <li class="@(o.IsCorrect ? "correct" : "")">
+                (@o.Label) @o.Content
+                @if (o.IsCorrect) { <i class="fas fa-check ml-1"></i> }
+            </li>
+        }
+    </ul>
+    <div class="hint"><i class="far fa-lightbulb"></i> @Model.Hint</div>
+</div>

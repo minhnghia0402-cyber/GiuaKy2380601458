@@ -1,0 +1,140 @@
+@using SV2380601458.Exams.Dto
+@model ExamStatisticsDto
+@{
+    ViewBag.Title = "Thống kê - " + Model.Title;
+    ViewBag.CurrentPageName = "Exams";
+}
+
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8">
+                <h1>Thống kê đề thi</h1>
+                <div class="text-muted">@Model.Title · @Model.TotalQuestions câu</div>
+            </div>
+            <div class="col-md-4 text-md-right mt-2 mt-md-0">
+                <a asp-action="Detail" asp-route-id="@Model.ExamId" class="btn btn-outline-secondary btn-sm"><i class="fas fa-arrow-left"></i> Về đề thi</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content">
+    <div class="container-fluid">
+        <partial name="_ExamAlerts" />
+
+        @* ---------- Các chỉ số tổng quan ---------- *@
+        <div class="row">
+            <div class="col-lg-3 col-6">
+                <div class="small-box bg-info">
+                    <div class="inner"><h3>@Model.AttemptCount</h3><p>Lượt làm bài</p></div>
+                    <div class="icon"><i class="fas fa-users"></i></div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-6">
+                <div class="small-box bg-success">
+                    <div class="inner"><h3>@Model.AverageCorrect<sup style="font-size:18px">/@Model.TotalQuestions</sup></h3><p>Điểm trung bình (số câu đúng)</p></div>
+                    <div class="icon"><i class="fas fa-check-double"></i></div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-6">
+                <div class="small-box bg-warning">
+                    <div class="inner"><h3>@Model.AveragePercent<sup style="font-size:18px">%</sup></h3><p>Tỉ lệ đúng trung bình</p></div>
+                    <div class="icon"><i class="fas fa-percentage"></i></div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-6">
+                <div class="small-box bg-secondary">
+                    <div class="inner"><h3>@Model.HighestCorrect / @Model.LowestCorrect</h3><p>Cao nhất / thấp nhất</p></div>
+                    <div class="icon"><i class="fas fa-sort-amount-up"></i></div>
+                </div>
+            </div>
+        </div>
+
+        @if (Model.AttemptCount == 0)
+        {
+            <div class="card">
+                <div class="card-body text-center text-muted p-5">
+                    <i class="fas fa-chart-bar fa-3x mb-3"></i>
+                    <p>Chưa có lượt thi nào cho đề này.</p>
+                    <p class="small">Khi app mobile chưa hoàn thành, bạn có thể tạo dữ liệu giả lập để kiểm tra trang thống kê.</p>
+                    <form asp-action="SeedDemo" asp-route-id="@Model.ExamId" method="post">
+                        <button class="btn btn-outline-primary"><i class="fas fa-magic"></i> Tạo 20 lượt thi giả lập</button>
+                    </form>
+                </div>
+            </div>
+        }
+        else
+        {
+            <div class="row">
+                @* ---------- Tỉ lệ đúng theo Part ---------- *@
+                <div class="col-lg-4">
+                    <div class="card">
+                        <div class="card-header"><h3 class="card-title"><i class="fas fa-layer-group"></i> Tỉ lệ đúng theo Part</h3></div>
+                        <div class="card-body">
+                            @foreach (var p in Model.PartStats)
+                            {
+                                var color = p.CorrectRate >= 70 ? "bg-success" : p.CorrectRate >= 50 ? "bg-warning" : "bg-danger";
+                                <div class="mb-3">
+                                    <div class="d-flex justify-content-between">
+                                        <b>Part @p.PartNumber</b><span>@p.CorrectRate% <small class="text-muted">(@p.QuestionCount câu)</small></span>
+                                    </div>
+                                    <div class="progress"><div class="progress-bar @color" style="width:@(p.CorrectRate.ToString(System.Globalization.CultureInfo.InvariantCulture))%"></div></div>
+                                </div>
+                            }
+                            <hr />
+                            <div class="text-muted small">Trung bình mỗi lượt bỏ qua <b>@Model.AverageSkipped</b> câu.</div>
+                        </div>
+                    </div>
+                </div>
+
+                @* ---------- Top 10 câu sai nhiều nhất ---------- *@
+                <div class="col-lg-8">
+                    <div class="card">
+                        <div class="card-header"><h3 class="card-title"><i class="fas fa-exclamation-circle text-danger"></i> Top 10 câu hỏi sinh viên làm sai nhiều nhất</h3></div>
+                        <div class="card-body p-0">
+                            <div class="table-responsive">
+                                <table class="table table-sm table-hover mb-0">
+                                    <thead class="thead-light">
+                                        <tr>
+                                            <th>#</th><th>Câu</th><th>Nội dung / đáp án đúng</th>
+                                            <th class="text-center">Sai</th><th class="text-center">Bỏ qua</th><th style="width:150px">Tỉ lệ sai</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @{ var rank = 1; }
+                                        @foreach (var q in Model.TopWrong)
+                                        {
+                                            <tr>
+                                                <td>@(rank++)</td>
+                                                <td class="text-nowrap">
+                                                    <a href="@Url.Action("Detail", new { id = Model.ExamId })#q@(q.QuestionNumber)"><b>@q.QuestionNumber</b></a>
+                                                    <br /><small class="text-muted">Part @q.PartNumber</small>
+                                                </td>
+                                                <td>
+                                                    @q.ContentSnippet<br />
+                                                    <small class="text-success"><i class="fas fa-check"></i> @q.CorrectAnswer</small>
+                                                </td>
+                                                <td class="text-center text-danger font-weight-bold">@q.WrongCount</td>
+                                                <td class="text-center">@q.SkippedCount</td>
+                                                <td>
+                                                    <div class="progress progress-sm"><div class="progress-bar bg-danger" style="width:@(q.WrongRate.ToString(System.Globalization.CultureInfo.InvariantCulture))%"></div></div>
+                                                    <small>@q.WrongRate% (@q.WrongCount/@q.TotalAttempts)</small>
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <form asp-action="ClearAttempts" asp-route-id="@Model.ExamId" method="post" class="mb-4"
+                  onsubmit="return confirm('Xoá TOÀN BỘ lượt thi của đề này (kể cả dữ liệu thật)?');">
+                <button class="btn btn-sm btn-outline-danger"><i class="fas fa-eraser"></i> Xoá toàn bộ lượt thi (dọn dữ liệu giả lập)</button>
+            </form>
+        }
+    </div>
+</section>

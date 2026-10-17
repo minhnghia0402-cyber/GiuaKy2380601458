@@ -23,15 +23,7 @@
 
 <section class="content">
     <div class="container-fluid">
-
-        @if (TempData["Success"] != null)
-        {
-            <div class="alert alert-success"><i class="fas fa-check-circle"></i> @TempData["Success"]</div>
-        }
-        @if (TempData["Error"] != null)
-        {
-            <div class="alert alert-danger"><i class="fas fa-exclamation-triangle"></i> @TempData["Error"]</div>
-        }
+        <partial name="_ExamAlerts" />
 
         <div class="card">
             <div class="card-body p-0">
@@ -65,7 +57,7 @@
                                     <tr>
                                         <td>@(i++)</td>
                                         <td>
-                                            <b>@e.Title</b><br />
+                                            <a asp-action="Detail" asp-route-id="@e.Id"><b>@e.Title</b></a><br />
                                             <small class="text-muted"><i class="far fa-file-word"></i> @e.SourceFileName</small>
                                         </td>
                                         <td class="text-center">@e.TotalQuestions</td>
@@ -87,10 +79,16 @@
                                         <td class="text-center">@e.AttemptCount</td>
                                         <td>@e.CreationTime.ToString("dd/MM/yyyy HH:mm")</td>
                                         <td class="text-right text-nowrap">
+                                            <a asp-action="Detail" asp-route-id="@e.Id" class="btn btn-sm btn-outline-primary" title="Xem trước / chỉnh sửa">
+                                                <i class="fas fa-eye"></i> Xem
+                                            </a>
+                                            <a asp-action="Statistics" asp-route-id="@e.Id" class="btn btn-sm btn-outline-info" title="Thống kê">
+                                                <i class="fas fa-chart-bar"></i>
+                                            </a>
                                             <form asp-action="Delete" asp-route-id="@e.Id" method="post" class="d-inline"
-                                                  onsubmit="return confirm('Xoá đề &quot;@e.Title&quot;?');">
-                                                <button type="submit" class="btn btn-sm btn-outline-danger">
-                                                    <i class="fas fa-trash"></i> Xoá
+                                                  onsubmit="return confirm('Xoá đề này?');">
+                                                <button type="submit" class="btn btn-sm btn-outline-danger" title="Xoá">
+                                                    <i class="fas fa-trash"></i>
                                                 </button>
                                             </form>
                                         </td>
