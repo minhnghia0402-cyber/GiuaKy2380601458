@@ -229,3 +229,6 @@ INFO  2026-10-17 13:55:48,704 [24   ] Microsoft.AspNetCore.Hosting.Diagnostics -
 INFO  2026-10-17 13:55:48,706 [24   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint '/signalr'
 DEBUG 2026-10-17 13:55:48,751 [21   ] Abp.AspNetCore.SignalR.Hubs.AbpCommonHub - A client is connected: {"ConnectionId":"x4A4wIc7AJ2kz1fKedEXZA","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2026-10-17T13:55:48.7338319+07:00","Properties":{}}
 DEBUG 2026-10-17 13:55:48,761 [21   ] Abp.AspNetCore.SignalR.Hubs.AbpCommonHub - A client is registered: x4A4wIc7AJ2kz1fKedEXZA
+DEBUG 2026-10-17 14:11:40,113 [9    ] Abp.AspNetCore.SignalR.Hubs.AbpCommonHub - A client is disconnected: x4A4wIc7AJ2kz1fKedEXZA
+INFO  2026-10-17 14:11:40,116 [9    ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint '/signalr'
+INFO  2026-10-17 14:11:40,116 [9    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 CONNECT https://localhost:44312/signalr?id=zkKtMdSLD5SmuDY95Fw-Ww - 200 - - 951411.5470ms
